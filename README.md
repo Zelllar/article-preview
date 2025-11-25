@@ -1,12 +1,71 @@
-React + Vite
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 📄 Article Preview Component
 
-Currently, two official plugins are available:
+Адаптивный компонент карточки статьи, реализованный по макету из Figma.  
+В проекте используется **React + Vite**, компонентный подход, адаптивная вёрстка (mobile → tablet → desktop) и логика появления всплывающего меню «Share».
 
-@vitejs/plugin-react uses Babel (or oxc when used in rolldown-vite) for Fast Refresh
-@vitejs/plugin-react-swc uses SWC for Fast Refresh
-React Compiler
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see this documentation.
+## 🚀 Demo
 
-Expanding the ESLint configuration
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the TS template for information on how to integrate TypeScript and typescript-eslint in your project.
+🔗 **Live Demo (GitHub Pages):** *https://zelllar.github.io/article-preview/*
+
+---
+
+## 🧰 Технологии
+
+- **React 18**
+- **Vite**
+- **CSS (модульная структура + custom properties)**  
+- **Mobile-first вёрстка**
+- **Flexbox**
+- Использование `<picture>` для адаптивных изображений
+- Разбор макета Figma и реализация UI-компонентов
+
+---
+
+## 📁 Структура проекта
+src/
+├─ assets/ # Изображения и иконки
+├─ components/
+│ └─ ArticleCard/
+│ ├─ ArticleCard.jsx
+│ ├─ ArticleCard.css
+│ ├─ ImageBlock.jsx
+│ ├─ ContentBlock.jsx
+│ ├─ AuthorBlock.jsx
+│ ├─ ShareButton.jsx
+│ └─ SharePopup.jsx
+├─ styles/
+│ ├─ globals.css # Reset + базовые настройки
+│ ├─ variables.css # Цвета и переменные
+│ └─ typography.css # Шрифты
+├─ App.jsx
+└─ main.jsx
+
+---
+
+## 📱📺 Адаптивность
+
+Проект сделан по принципу **mobile-first**:
+
+- **Мобильная версия (до 768px)**  
+  Картинка сверху, контент снизу, меню «Share» открывается снизу карточки.
+
+- **Планшетная и десктопная версия**  
+  Картинка слева, текст справа, меню «Share» выпадает сверху и имеет другой вид.
+
+---
+
+## 🧠 Функциональность
+
+### ✔ Кнопка «Share»
+- Переключает состояние `isShareOpen`
+- Меняет иконку (синяя ↔ белая)
+- Открывает всплывающее меню
+- Меню закрывается:
+  - повторным кликом по кнопке
+  - кликом вне меню
+
+### ✔ Всплывающее меню
+- Telegram
+- VK
+- Email  
+(Каждая кнопка — ссылка на внешний ресурс с `target="_blank"` и `rel="noopener noreferrer"`)

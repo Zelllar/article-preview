@@ -22,24 +22,21 @@
 ---
 
 ## 📁 Структура проекта
-src/
-├─ assets/ # Изображения и иконки
-├─ components/
-│ └─ ArticleCard/
-│ ├─ ArticleCard.jsx
-│ ├─ ArticleCard.css
-│ ├─ ImageBlock.jsx
-│ ├─ ContentBlock.jsx
-│ ├─ AuthorBlock.jsx
-│ ├─ ShareButton.jsx
-│ └─ SharePopup.jsx
-├─ styles/
-│ ├─ globals.css # Reset + базовые настройки
-│ ├─ variables.css # Цвета и переменные
-│ └─ typography.css # Шрифты
-├─ App.jsx
-└─ main.jsx
-
+- `src/assets` — изображения и иконки  
+- `src/components/ArticleCard` — компоненты карточки  
+  - ArticleCard.jsx  
+  - ImageBlock.jsx  
+  - ContentBlock.jsx  
+  - AuthorBlock.jsx  
+  - ShareButton.jsx  
+  - SharePopup.jsx  
+  - ArticleCard.css  
+- `src/styles`  
+  - globals.css  
+  - variables.css  
+  - typography.css  
+- App.jsx  
+- main.jsx
 ---
 
 ## 📱📺 Адаптивность
